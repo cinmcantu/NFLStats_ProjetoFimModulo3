@@ -28,11 +28,11 @@ CREATE TABLE draft (
     playerProfileUrl VARCHAR(300),
     homeCity VARCHAR(100),
     homeState VARCHAR(4),
-    homeCountry VARCHAR(15),
+    homeCountry VARCHAR(20),
     highSchool VARCHAR(50),
     hsCity VARCHAR(50),
     hsState VARCHAR(10),
-    hsCountry VARCHAR(10)
+    hsCountry VARCHAR(20)
 );
 
 -- Criando tabela games
@@ -61,7 +61,6 @@ DROP TABLE IF EXISTS plays;
 CREATE TABLE plays (
     playId INT PRIMARY KEY NOT NULL,
     gameId INT,
-    FOREIGN KEY (gameId) REFERENCES games(gameId),
     playSequence INT,
     quarter INT,
     possessionTeamId INT,
@@ -111,10 +110,8 @@ DROP TABLE IF EXISTS interceptions;
 CREATE TABLE interceptions (
     interceptionId INT PRIMARY KEY NOT NULL,
     playId INT,
-    FOREIGN KEY (playId) REFERENCES plays(playId),
     teamId INT,
     playerId INT,
-    FOREIGN KEY (playerId) REFERENCES draft(playerId),
     intPosition VARCHAR(4),
     int_ TINYINT,
     intYards INT,
@@ -127,10 +124,8 @@ DROP TABLE IF EXISTS passer;
 CREATE TABLE passer (
     passId INT PRIMARY KEY NOT NULL,
     playId INT,
-    FOREIGN KEY (playId) REFERENCES plays(playId),
     teamId INT,
     playerId INT,
-    FOREIGN KEY (playerId) REFERENCES draft(playerId),
     passPosition VARCHAR(4),
     passOutcomes VARCHAR(15),
     passDirection VARCHAR(10),
@@ -153,7 +148,6 @@ DROP TABLE IF EXISTS penalties;
 CREATE TABLE penalties (
     penaltyId INT PRIMARY KEY NOT NULL,
     playId INT,
-    FOREIGN KEY (playId) REFERENCES plays(playId),
     teamId INT,
     playerId INT,
     penaltyPosition VARCHAR(4),
@@ -161,4 +155,3 @@ CREATE TABLE penalties (
     penaltyYds DOUBLE,
     penaltyResult VARCHAR(20)
 );
-

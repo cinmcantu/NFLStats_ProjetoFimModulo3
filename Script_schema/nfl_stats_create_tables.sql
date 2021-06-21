@@ -3,8 +3,18 @@ DROP DATABASE IF EXISTS patriots_stats_nfl;
 CREATE DATABASE patriots_stats_nfl;
 USE patriots_stats_nfl;
 
+
+-- Drops de tabelas
+-- Descomente as linhas se necessário
+-- DROP TABLE IF EXISTS draft;
+-- DROP TABLE IF EXISTS games;
+-- DROP TABLE IF EXISTS plays;
+-- DROP TABLE IF EXISTS interceptions;
+-- DROP TABLE IF EXISTS passer;
+-- DROP TABLE IF EXISTS penalties;
+-- DROP TABLE IF EXISTS kicks;
+
 -- Criando tabela de Draft
-DROP TABLE IF EXISTS draft;
 CREATE TABLE draft (
     playerId INT PRIMARY KEY NOT NULL,
     draft INT,
@@ -36,7 +46,6 @@ CREATE TABLE draft (
 );
 
 -- Criando tabela games
-DROP TABLE IF EXISTS games;
 CREATE TABLE games (
 	gameId INT PRIMARY KEY NOT NULL,
     season int,
@@ -57,7 +66,6 @@ CREATE TABLE games (
 );
 
 -- Criando Tabela Plays
-DROP TABLE IF EXISTS plays;
 CREATE TABLE plays (
     playId INT PRIMARY KEY NOT NULL,
     gameId INT,
@@ -106,7 +114,6 @@ CREATE TABLE plays (
 );
 
 -- Criando tabela interceptions
-DROP TABLE IF EXISTS interceptions;
 CREATE TABLE interceptions (
     interceptionId INT PRIMARY KEY NOT NULL,
     playId INT,
@@ -120,7 +127,6 @@ CREATE TABLE interceptions (
 );
 
 -- Criando tabela passer
-DROP TABLE IF EXISTS passer;
 CREATE TABLE passer (
     passId INT PRIMARY KEY NOT NULL,
     playId INT,
@@ -144,7 +150,6 @@ CREATE TABLE passer (
 );
 
 -- Criando tabela de penalties
-DROP TABLE IF EXISTS penalties;
 CREATE TABLE penalties (
     penaltyId INT PRIMARY KEY NOT NULL,
     playId INT,
@@ -154,4 +159,23 @@ CREATE TABLE penalties (
     penaltyDescrip TEXT,
     penaltyYds DOUBLE,
     penaltyResult VARCHAR(20)
+);
+
+-- Criando tabela kicks
+CREATE TABLE kicks (
+    kickId INT PRIMARY KEY NOT NULL,
+    playId INT,
+    teamId INT,
+    playerId INT,
+    kickPosition VARCHAR(5),
+    kickType VARCHAR(10),
+    kickOutcome VARCHAR(20),
+    kickInside20 TINYINT,
+    kickOnside TINYINT,
+    kickOwnRecovery TINYINT,
+    kickLength DOUBLE,
+    kickReturnYds INT,
+    kickNetYds DOUBLE,
+    kickReturnTd TINYINT,
+    kickNull TINYINT
 );

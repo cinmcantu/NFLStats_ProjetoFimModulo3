@@ -14,3 +14,13 @@ Projeto de fim de módulo da Resilia Educação.
 ### Interceptações
 ![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Interceptacoes.png?raw=true)
 
+### Passes
+![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Passes_resultados_distancia.png?raw=true)
+![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Passes_tipo_jogador.png?raw=true)
+![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Passes_touchdown.png?raw=true)
+
+### Chutes
+![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Chutes.png?raw=true)
+
+### Faltas
+![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Faltas.png?raw=true)

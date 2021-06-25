@@ -8,6 +8,8 @@ A pesquisa destaca como os altos resultados obtidos por Tom Brady frente ao dema
 
 Projeto de fim de módulo da Resilia Educação.
 
+Para visualizar a apresentação no Prezi [clique aqui](https://prezi.com/p/wzb4tlgwfwbe/?present=1)!
+
 
 ## Graficos adquiridos a partir da utilização do Metabase
 

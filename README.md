@@ -7,3 +7,10 @@ Consulta realizada no banco de dados NFL através de 17 queries que nos permitiu
 A pesquisa destaca como os altos resultados obtidos por Tom Brady frente ao demais jogadores se deve a maior performance que o mesmo apresenta dentro de campo, evidenciando a importância deste jogador para a liga norte-americana de futebol americano (NFL).
 
 Projeto de fim de módulo da Resilia Educação.
+
+
+## Graficos adquiridos a partir da utilização do Metabase
+
+### Interceptações
+![alt text](https://github.com/cinmcantu/NFLStats_ProjetoFimModulo3/blob/main/Graficos/Interceptacoes.png?raw=true)
+
